@@ -161,13 +161,13 @@ def data_process():
 	
 	print("test data", test_x.shape, test_y.shape)
 	
-	window_size_list=[(2,4)]
-	# window_height = [2,4,6,]
-	# window_width = [2,6,]
-	# window_size_list = []
-	# for h in window_height :
-	# 	for w in window_width :
-	# 		window_size_list.append((h, w))
+	# window_size_list=[(2,4)]
+	window_height = [2,4,6,]
+	window_width = [2,6,]
+	window_size_list = []
+	for h in window_height :
+		for w in window_width :
+			window_size_list.append((h, w))
 	print("window_size_list", len(window_size_list), window_size_list)
 	
 	train_feature = compute_features(train_x, window_size_list)
@@ -363,5 +363,5 @@ def train():
 	return 1
 
 
-# data_process()
+data_process()
 train()
